@@ -1,0 +1,331 @@
+.dispatch-header {
+  height: 45px;
+  line-height: 45px;
+  margin-top: 20px;
+}
+
+.dispatch-header label {
+  display: inline-block;
+  font-size: 28px;
+}
+
+.el-input__inner {
+  padding: 0 10px;
+}
+
+.dispatch-header .line-select .el-input__inner, .line-select .el-select,
+.dispatch-header .el-select:hover .el-input__inner,
+.dispatch-header .el-form-item.is-success .el-input__inner {
+  font-size: 26px !important;
+  color: red;
+  border-bottom-color: red;
+  height: 45px;
+  line-height: 45px;
+}
+
+.dispatch-header .el-select .el-input.is-focus .el-input__inner {
+  border-bottom-color: red;
+}
+
+.border-bottom-red {
+
+}
+
+.line-select .el-input__inner,
+.line-select .el-select {
+  height: 45px;
+  line-height: 45px;
+  border: none;
+  padding: 0;
+  text-align: center;
+  border-bottom: 1px solid red;
+  border-radius: 0;
+
+}
+
+.line-select .el-input__suffix {
+  display: none;
+
+}
+
+.dispatch-page .err-top-change .el-form-item__error {
+  top: 32px;
+}
+
+/*.line-select .el-form-item {*/
+/*margin-bottom: 0;*/
+/*margin-right: 0;*/
+/*}*/
+
+.red {
+  color: red;
+
+}
+
+.height-30 {
+  height: 30px;
+  line-height: 33px;
+  display: inline-block;
+}
+
+.ml5 {
+  margin-left: 5px;
+}
+
+.dispatch-page .el-form-item__error {
+  /*line-height: 30px;*/
+  color: #e6a23c;
+  background: #fdf6ec;
+}
+
+.dispatch-page .el-form-item.is-error .el-input__inner,
+.dispatch-page .el-form-item.is-error .el-input__inner:focus,
+.dispatch-page .el-form-item.is-error .el-textarea__inner,
+.dispatch-page .el-form-item.is-error .el-textarea__inner:focus,
+.dispatch-page .el-message-box__input input.invalid,
+.dispatch-page .el-message-box__input input.invalid:focus {
+  border-color: #e6a23c;
+}
+
+.input-border-b, .input-border-b .el-form-item__content {
+  height: 30px;
+}
+
+.input-border-b .el-input__inner {
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid red;
+  vertical-align: top;
+
+}
+
+.dispatch-page .el-input__icon {
+  color: #dcdfe6;
+  line-height: 30px;
+}
+
+.dispatch-page .drafting-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  //margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.drafting-table > thead > tr > th, .drafting-table > tbody > tr > td {
+  height: 24px;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid rgba(255, 23, 8, 0.7);
+}
+
+.drafting-table tr th span, .drafting-table tr td span {
+  /*color: red;*/
+  font-weight: 500 !important;
+}
+
+/*.color-style {*/
+/*color: #606266 !important;*/
+/*font-weight: 500 !important;*/
+/*}*/
+
+.dispatch-page .el-input__inner, .dispatch-page .el-select {
+  height: 30px;
+  line-height: 30px;
+}
+
+.dispatch-page tr td button span {
+  color: #fff;
+}
+.dispatch-page th{
+  font-weight: 500;
+}
+.dialog-document-content {
+  min-height: 350px;
+  overflow: auto;
+}
+
+.h-200 {
+  min-height: 200px;
+}
+
+.attachments-box {
+
+  font-size: 14px;
+  color: #909399;
+  margin-left: 45px;
+  margin-bottom: 0;
+}
+
+.attachments-box li {
+  /*margin-top: 10px;*/
+  margin-bottom: 10px;
+
+}
+.attachments-box li a{
+  color: #909399;
+}
+
+.suggest-style {
+  margin-top: 3px;
+  color: #606266;
+  -ms-word-break: break-all;
+  word-break: break-all;
+}
+
+.suggest-style p {
+  margin-top: 10px;
+}
+.progress-title .el-input {
+  font-size: 30px;
+}
+.progress-title-box .op-progress-title{
+  width: 600px;
+  height: 45px;
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 99;
+  opacity: 0!important;
+}
+.textHead{
+  width: 600px;
+  height: 45px;
+  font-size: 28px;
+  color: red;
+  border: none;
+  border-bottom: 1px solid red;
+  text-align: center;
+  border-radius: 0;
+}
+.textHead input{
+  border: none;
+}
+.textHead  input::-webkit-input-placeholder {
+  color: red;
+  font-size: 28px;
+  text-align: center;
+}
+.width-item-100, .width-item-100 .el-form-item__content {
+  width: 100%;
+}
+.disabled-input-bgc .el-input.is-disabled .el-input__inner {
+  background: #fff;
+}
+
+.document-head{
+  line-height: 40px;
+  height: 40px;
+}
+.drafting-table{
+  color: #555;
+}
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.main-content-box .text-center .el-input__inner{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.dispatch-from-box{
+  padding: 10px 20px;
+}
+.float-right{
+  float: right;
+}
+.office-box{
+  height: 800px;
+}
+.dispatch-page{
+  font-size: 16px;
+  a{
+    color: $color_norm;
+    &:hover{
+      color: $color_norm;
+      text-decoration: underline;
+    }
+  }
+  .el-input-group__append, .el-input-group__prepend{
+    color: $color_norm;
+    background-color: $color_norm;
+    border-color: $color_norm;
+  }
+  .el-form-item{
+    margin-bottom: 0;
+  }
+  .hide-office {
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+  .el-input--medium .el-input__inner,.el-input--medium .el-input__icon{
+    height: 30px;
+    line-height: 30px;
+  }
+  label{
+    font-weight: 500;
+  }
+  .receipt-header {
+    height: 45px;
+    line-height: 45px;
+    color: red;
+    font-size: 22px;
+    margin-top: 20px;
+  }
+
+  .receipt-header label {
+    border-bottom: 1px solid red;
+    padding-bottom: 4px;
+  }
+}
+.progress-header span {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: $color_norm;
+  border-radius: 35px;
+  text-align: center;
+  line-height: 35px;
+}
+@media print {
+  table {
+    /* 在这里定义你表格相关的打印样式即可 */
+    border-collapse: collapse;
+    width: 86%;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 23, 8, 1);
+    height: 90%;
+  }
+
+  table td, table th {
+    border: 1px solid rgba(255, 23, 8, 1);
+    padding: 10px 0;
+  }
+
+  .table > thead > tr > th, .table > tbody > tr > td {
+    height: 40px;
+    padding: 5px;
+  }
+
+  .min-height-180 {
+    height: 100%;
+  }
+  .drafting-table > thead > tr > th, .drafting-table > tbody > tr > td {
+    height: 24px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid rgba(255, 23, 8, 0.7);
+  }
+}
+.text-left{
+  text-align: left;
+}
+.flex{
+  display: flex;
+}
+.flex-1{
+  flex: 1;
+}

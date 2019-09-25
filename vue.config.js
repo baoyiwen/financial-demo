@@ -9,6 +9,16 @@ module.exports = {
     // // eslint-disable-next-line no-unused-vars
     // chainWebpack: (config) => {
     // },
+    //     rules: [{
+    //         test: /\.scss$/,
+    //         use: [{
+    //             loader: "style-loader" // 将 JS 字符串生成为 style 节点
+    //         }, {
+    //             loader: "css-loader" // 将 CSS 转化成 CommonJS 模块
+    //         }, {
+    //             loader: "sass-loader" // 将 Sass 编译成 CSS
+    //         }]
+    //     }],
     configureWebpack: (config) => {
         if (process.env.NODE_ENV === 'production') {
             // 为生产环境修改配置...
@@ -20,6 +30,7 @@ module.exports = {
         Object.assign(config, {
             // 开发生产共同配置
             resolve: {
+                extensions: ['.js', '.vue', '.json'],
                 alias: {
                     '@': path.resolve(__dirname, './src'),
                     '@c': path.resolve(__dirname, './src/components'),
@@ -28,20 +39,19 @@ module.exports = {
             }
         })
     },
-    // productionSourceMap: false, // 生产环境是否生成 sourceMap 文件
-    // // css相关配置
-    // css: {
-    //     extract: true, // 是否使用css分离插件 ExtractTextPlugin
-    //     sourceMap: false, // 开启 CSS source maps?
-    //     loaderOptions: {
-    //         css: {}, // 这里的选项会传递给 css-loader
-    //         postcss: {} // 这里的选项会传递给 postcss-loader
-    //     }, // css预设器配置项 详见https://cli.vuejs.org/zh/config/#css-loaderoptions
-    //     modules: false // 启用 CSS modules for all css / pre-processor files.
-    // },
-    // parallel: require('os').cpus().length > 1, // 是否为 Babel 或 TypeScript 使用 thread-loader。该选项在系统的 CPU 有多于一个内核时自动启用，仅作用于生产构建。
-    // pwa: {}, // PWA 插件相关配置 see https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
-    // // webpack-dev-server 相关配置
+    productionSourceMap: false, // 生产环境是否生成 sourceMap 文件
+    // css相关配置
+    css: {
+        extract: true, // 是否使用css分离插件 ExtractTextPlugin
+        sourceMap: false, // 开启 CSS source maps?
+        loaderOptions: {
+            css: {}, // 这里的选项会传递给 css-loader
+            postcss: {},// 这里的选项会传递给 postcss-loader
+            sass: {},  // 这里的选项会传递给 sass-loader
+        }, // css预设器配置项 详见https://cli.vuejs.org/zh/config/#css-loaderoptions
+        modules: false // 启用 CSS modules for all css / pre-processor files.
+    },
+    // webpack-dev-server 相关配置
     devServer: {
         open: true,
         host: '0.0.0.0', // 允许外部ip访问
@@ -65,5 +75,17 @@ module.exports = {
     // 第三方插件配置
     pluginOptions: {
 
-    }
+    },
+    // module:{
+    //     rules: [{
+    //         test: /\.scss$/,
+    //         use: [{
+    //             loader: "style-loader" // 将 JS 字符串生成为 style 节点
+    //         }, {
+    //             loader: "css-loader" // 将 CSS 转化成 CommonJS 模块
+    //         }, {
+    //             loader: "sass-loader" // 将 Sass 编译成 CSS
+    //         }]
+    //     }],
+    // },
 }

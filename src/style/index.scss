@@ -1,0 +1,378 @@
+@import './variables.scss';
+@import './common.scss';
+//@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+//@import './btn.scss';
+//@import './header.scss';
+@import './tags-view.scss';
+//@import './search-bar.scss';
+//@import './page.scss';
+//@import './style.scss';
+@import './dispatch.scss';
+@import './mixin.scss';
+//@import './approve.scss';
+@import './component.scss';
+//@import './supplies.scss';
+//@import './login.scss';
+//@import './orgComponents.scss';
+
+body {
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
+  font-size: 14px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  min-width: 1250px;
+  background: $color_normal_bg;
+}
+
+#app{
+  height: 100%;
+  background: $color_normal_bg;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.padding-content {
+  padding: 4px 0;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus{
+  outline: none;
+ }
+
+.fr {
+  float: right;
+}
+
+.fl {
+  float: left;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.pl-5 {
+  padding-left: 5px;
+}
+
+.block {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.inlineBlock {
+  display: block;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+code {
+  background: #eef1f6;
+  padding: 15px 16px;
+  margin-bottom: 20px;
+  display: block;
+  line-height: 36px;
+  font-size: 15px;
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  a {
+    color: #337ab7;
+    cursor: pointer;
+    &:hover {
+      color: rgb(32, 160, 255);
+    }
+  }
+}
+
+.warn-content{
+  background: rgba(66,185,131,.1);
+  border-radius: 2px;
+  padding: 16px;
+  padding: 1rem;
+  line-height: 1.6rem;
+  word-spacing: .05rem;
+  a{
+    color: #42b983;
+    font-weight: 600;
+  }
+}
+
+//main-container全局样式
+
+//main-container全局样式
+.app-main{
+  height: calc(100vh - 144px);
+  overflow: auto;
+}
+
+.app-container {
+  padding: 20px;
+}
+.x-hidden .el-scrollbar__wrap{
+  overflow-x: auto;
+}
+ul,ol,li{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.components-container {
+  margin: 30px 50px;
+  position: relative;
+}
+
+.pagination-container {
+  margin-top: 30px;
+}
+
+.text-center {
+  text-align: center
+}
+
+.sub-navbar {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  width: 100%;
+  text-align: right;
+  padding-right: 20px;
+  transition: 600ms ease position;
+  background: linear-gradient(90deg, rgba(32, 182, 249, 1) 0%, rgba(32, 182, 249, 1) 0%, rgba(33, 120, 241, 1) 100%, rgba(33, 120, 241, 1) 100%);
+  .subtitle {
+    font-size: 20px;
+    color: #fff;
+  }
+  &.draft {
+    background: #d0d0d0;
+  }
+  &.deleted {
+    background: #d0d0d0;
+  }
+}
+
+.link-type,
+.link-type:focus {
+  color: #337ab7;
+  cursor: pointer;
+  &:hover {
+    color: rgb(32, 160, 255);
+  }
+}
+
+.filter-container {
+  padding-bottom: 10px;
+  .filter-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 10px;
+  }
+}
+
+//refine vue-multiselect plugin
+.multiselect {
+  line-height: 16px;
+}
+
+.multiselect--active {
+  z-index: 1000 !important;
+}
+//底部有分页、搜索框的
+.m-table-box {
+  padding: 10px;
+  padding-right: 20px;
+  height: calc(100vh - 265px);
+  ::-webkit-scrollbar {display:none}
+  table{
+    overflow-y: hidden;
+  }
+  .el-scrollbar__wrap{
+    overflow-y: auto;
+    ::-webkit-scrollbar {display:none}
+  }
+}
+//没有底部分页、搜索框的
+.m-content-box{
+  padding: 10px 0;
+  box-sizing: border-box;
+  height: calc(100vh - 231px);
+  ::-webkit-scrollbar {display:none}
+  .el-scrollbar__wrap{
+    margin: 0 !important;
+
+  }
+  .m-content{
+    padding:0 10px;
+    box-sizing: border-box;
+    height: 100%;
+    .el-tabs__content{
+      height: calc(100% - 30px);
+      .el-tab-pane{
+        height: 100%;
+      }
+    }
+    .el-tabs--border-card>.el-tabs__content{
+      padding: 0;
+      padding-bottom: 6px;
+    }
+  }
+  .content-title{
+    position: relative;
+    z-index: 1;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    text-align: center;
+    color: $color_norm;
+    background: #E0F2FF;
+    .content{
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+      display: flex;
+    }
+    .article-title{
+      text-align: left;
+      font-size: 16px;
+      flex: 1;
+    }
+    .time{
+      width: 200px;
+      font-size: 14px;
+    }
+  }
+}
+.article-list-box{
+  margin-top: 20px;
+  height: calc(100vh - 315px);
+  ul{
+    max-width: 1000px;
+    margin: auto;
+  }
+  .article-item{
+    display: flex;
+    padding: 10px 0;
+    .embellish{
+      width: 15px;
+      color: $color_norm;
+      padding-top: 2px;
+      vertical-align: text-bottom;
+    }
+    .article-title{
+      flex: 1;
+    }
+    .article-author{
+      width: 120px;
+      font-size: $font_normal;
+      color: $text_color_minor;
+    }
+    .article-time{
+      width: 120px;
+      font-size: $font_normal;
+      color: $text_color_minor;
+    }
+  }
+}
+.article-content{
+  max-width: 1000px;
+  margin: auto;
+  line-height: 30px;
+  padding: 20px 0;
+  border-bottom: 1px solid $color_border;
+}
+.accessory-box{
+  margin: auto;
+  margin-top: 20px;
+  max-width: 1000px;
+  font-size: $font_normal;
+  color: $color_norm;
+}
+.accessory-list li{
+  display: flex;
+  line-height: 30px;
+  .name{
+    margin-left: 10px;
+    color: $text_color_normal;
+  }
+}
+.el-table th{
+  background: $color_normal_bg;
+  color: #444;
+}
+.el-table--enable-row-hover .el-table__body tr:hover>td{
+  background: #E0F2FF;
+}
+.m-footer{
+  border-top: 6px solid #f5f5f5;
+  box-sizing: border-box;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background: #fff;
+  font-size: 12px;
+  color: $text_color_normal;
+  margin-left: -230px;
+}
+.app-child-box{
+  height: 100%;
+}
+.el-table th{
+  background: #fafafa;
+}
+.no-head-tabs .el-tabs__header {
+  display: none;
+}
+.mt50{
+  margin-top: 50px;
+}
+.el-input.is-disabled .el-input__inner,.el-textarea.is-disabled .el-textarea__inner{
+  background-color: #fbfbfb!important;
+  color: #555!important;
+}

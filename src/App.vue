@@ -7,26 +7,28 @@
   import { server } from  '@/network/request'
   export default {
     name: 'app',
-    components:{},
+    components:{
+
+    },
     data(){
       return{
 
       }
     },
     mounted(){
-      this.getUserInfo();
+     // this.getUserInfo();
     },
     methods:{
-      getUserInfo(){
-        server({
-          url: 'userInfo/all',
-          method: 'get',
-        }).then(res=>{
-          console.log(res);
-        },error => {
-          console.log(error);
-        })
-      }
+      // getUserInfo(){
+      //   server({
+      //     url: 'userInfo/all',
+      //     method: 'get',
+      //   }).then(res=>{
+      //     console.log(res);
+      //   },error => {
+      //     console.log(error);
+      //   })
+      // }
     }
   }
 </script>

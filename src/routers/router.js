@@ -1,30 +1,54 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import store from '@/store/store'
+import Layout from '@/views/layout/Layout.vue'
+import demo from '@/routers/demo/demo'
 
 Vue.use(Router)
 
-const pathManage = [
-  {
-    path: '/',
-    name: 'index',
-    component: () => import('@/views/index.vue')
-  },
-  // {
-  //   path: '/about',
-  //   name: 'about',
-  //   // route level code-splitting
-  //   // this generates a separate chunk (about.[hash].js) for this route
-  //   // which is lazy-loaded when the route is visited.
-  //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  // }
+export const pathManage = [
+    {
+        path: '/',
+        name: 'index',
+        meta: {title: '首页',},
+        component: () => import('@/views/index.vue'),
+        redirect: '/redirect',
+    },
+    {
+        path: '/redirect',
+        component: Layout,
+        hidden: false,
+        meta: {title: '起始页',},
+        children: [
+            {
+                path: '/redirect',
+                meta: {title: '起始页'},
+                component: () => import('@/views/redirect/redirect.vue')
+            },
+        ]
+    }, {
+        path: '/404',
+        name: '404',
+        component: () => import('@/views/errorPage/404.vue'),
+        meta: {title: 'Not Find Page'},
+    }, {
+        path: '*',
+        redirect: '404',
+        hidden: false
+    }
 ];
 
-export default new Router({
-  mode: 'history',
-  base: process.env.BASE_URL,
-  routes: pathManage
-})
+const router = new Router({
+    mode: 'history',
+    routes: pathManage,
+});
 
-export const synaPathManage = {
+router.beforeEach((to, from, next) => {
+    document.title = to.matched[0].meta.title || 'No-Title';
+    next();
+});
 
-}
+export default router
+export const asyncRouterMap = [
+    demo,
+]

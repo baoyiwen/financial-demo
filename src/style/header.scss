@@ -1,0 +1,169 @@
+body{
+  min-width: 1200px;
+}
+.m-header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: block;
+  height: 80px;
+  overflow: hidden;
+  min-width: 1250px;
+  background: $color_norm;
+  .logo-box{
+    //width: 500px;
+    width: 280px;
+    height: 80px;
+    float: left;
+    line-height: 80px;
+    font-size: $font_log;
+    color: #fff;
+  }
+  .logo-img{
+    display: inline-block;
+    margin: 0 17px;
+  }
+  .top-menu-box{
+    float: left;
+    width: 750px;
+    height: 80px;
+    overflow: hidden;
+    position: relative;
+    .top-menu{
+      width: 700px;
+      position: absolute;
+      border: none;
+      background: inherit;
+      color: $text_color_primary;
+      .el-menu-item{
+        color:#fff;
+        height: 80px;
+        width: 100px;
+        box-sizing: border-box;
+        border-left:1px solid $color_norm;
+        text-align: center;
+        padding: 0;
+        i{
+          display: block;
+          width: 100%;
+          height: 28px;
+          line-height: 28px;
+          font-size: 28px!important;
+          margin-top: 16px;
+          text-align: center;
+          color: #fff;
+        }
+        span{
+          display: block;
+          margin-top: 6px;
+          height: 20px;
+          line-height: 20px;
+          font-size: $font_normal;
+          text-align: center;
+        }
+      }
+      .is-active,.el-menu-item:hover{
+        background: #fff;
+        color: $color_norm;
+        i{
+          color: $color_norm;
+        }
+      }
+    }
+    .top-menu-btn-box{
+      position: absolute;
+      left: 700px;
+      top: 0;
+      text-align: center;
+      width: 40px;
+      height: 80px;
+      .bottom-btn{
+        margin-top: 5px;
+      }
+      span{
+        display: block;
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
+        background: #fff;
+        margin: auto;
+        color: $color_norm;
+        margin-top: 10px;
+        cursor: pointer;
+        :hover{
+          opacity: .5;
+        }
+      }
+      .disabled{
+        opacity: .5;
+        cursor: no-drop;
+      }
+      .top-btn{
+        margin-top: 17px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .header-right{
+    float: right;
+    height: 80px;
+
+    text-align: right;
+    line-height: 80px;
+    color: #fff;
+    .icon-bofangqi-suoping{
+      font-size: 25px!important;
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 25px;
+    }
+    .iconfont{
+      font-size: 25px;
+      cursor: pointer;
+      width: 25px;
+      height: 25px;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 25px;
+    }
+    li{
+      padding: 0 15px;
+      line-height: 80px;
+      display: inline-block;
+      .iconfont{
+        vertical-align: middle;
+      }
+      .el-color-picker--small, .el-color-picker--small .el-color-picker__trigger{
+        width: 25px;
+        height: 25px;
+      }
+      .top-userImg{
+        width: 40px;
+        height: 40px;
+        padding:2px;
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 40px;
+        border-radius: 100%;
+        box-sizing: border-box;
+        border: 1px solid #eee;
+      }
+      .top-userImg-box{
+        i{
+          width: 40px;
+          height: 40px;
+          font-size: 40px;
+          line-height: 40px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
