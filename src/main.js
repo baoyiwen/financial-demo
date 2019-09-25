@@ -12,7 +12,8 @@ import 'normalize.css'
 import './permission.js'
 import iview from 'iview'
 import 'iview/dist/styles/iview.css'
-
+import './assets/fonts/main/iconfont.css'
+import './icons'
 //  导入所有请求方法
 import {getRequest, postRequest, deleteRequest, putRequest, uploadFileRequest} from '@/network/server'
 

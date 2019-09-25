@@ -4,7 +4,7 @@
 @import './element-ui.scss';
 @import './sidebar.scss';
 //@import './btn.scss';
-//@import './header.scss';
+@import './header.scss';
 @import './tags-view.scss';
 //@import './search-bar.scss';
 //@import './page.scss';
@@ -16,6 +16,7 @@
 //@import './supplies.scss';
 //@import './login.scss';
 //@import './orgComponents.scss';
+@import './appViews/appIndex.scss';
 
 body {
   height: 100vh;

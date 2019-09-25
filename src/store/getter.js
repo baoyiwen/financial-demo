@@ -9,6 +9,7 @@ const getters = {
     permission_routers: state => state.permission.routers,
     currentM: state => state.permission.currentM,
     addRouters: state => state.permission.addRouters,
+    theme: state => state.user.theme
 }
 
 export default getters;

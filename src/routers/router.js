@@ -10,26 +10,47 @@ export const pathManage = [
     {
         path: '/',
         name: 'index',
-        meta: {title: '首页',},
-        component: () => import('@/views/index.vue'),
-        redirect: '/redirect',
+        meta: {title: '起始页',icon: 'iconfont icon-fuli'},
+        component: Layout,
+        redirect: 'article-detail',
+        children: [
+            {
+                path: 'article-detail',
+                component: () => import('@/views/demo/article-detail'),
+                name: 'index',
+                hidden: false,
+                meta: { title: '详情', noCache: true }
+            }
+        ]
     },
     {
         path: '/redirect',
         component: Layout,
         hidden: false,
-        meta: {title: '起始页',},
+        meta: {title: '起始页',icon: 'iconfont icon-fuli'},
+        redirect: 'redirect',
         children: [
             {
                 path: '/redirect',
-                meta: {title: '起始页'},
+                name: 'redirect',
+                meta: { title: '重定向页', noCache: true },
                 component: () => import('@/views/redirect/redirect.vue')
             },
         ]
     }, {
+        path: '/appIndex',
+        name: 'appIndex',
+        component: Layout,
+        meta: {title: '登陆首页'},
+    },{
         path: '/404',
         name: '404',
         component: () => import('@/views/errorPage/404.vue'),
+        meta: {title: 'Not Find Page'},
+    },{
+        path: '/401',
+        name: '401',
+        component: () => import('@/views/errorPage/401.vue'),
         meta: {title: 'Not Find Page'},
     }, {
         path: '*',

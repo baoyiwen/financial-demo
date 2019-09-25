@@ -28,12 +28,12 @@
         <li>
           <el-tooltip class="item" effect="dark" placement="bottom">
             <div slot="content">
-              姓名:{{ userInfo.person_name }}<br>
-              工号:{{ userInfo.person_code }}<br>
-              部门:{{ userInfo.org_abbreviation }}<br>
+              姓名:张三<br>
+              工号:10000000000<br>
+              部门:软件事业部<br>
             </div>
             <span class="top-userImg-box" @click="goUserInfo">
-              <img v-if="userInfo.portrait" :src="baseUrl+userInfo.portrait" class="top-userImg">
+              <img v-if="true" src="../../../../assets/img/appResourcesImg/indexImg/bj.png" class="top-userImg">
               <i v-else class="iconfont icon-touxiang"/>
             </span>
           </el-tooltip>
@@ -62,13 +62,12 @@
 
 </style>
 <script>
-import router from '@/router/index'
-import store from '@/store/index'
+import router from '@/routers/router'
+import store from '@/store/store'
 import $ from 'jquery'
 import { mapGetters } from 'vuex'
 import Screenfull from '@/components/Screenfull'
 import ThemePicker from '@/components/ThemePicker/top-theme'
-import global from '@/initData/Global.vue'
 export default {
   components: {
     Screenfull,
@@ -82,7 +81,7 @@ export default {
       topMenu_h: 0,
       personInfo: {},
       dialogVisible: false,
-      baseUrl: global.initData.filePrefixPath,
+      baseUrl: '',
       action: '',
       portrait: ''
 
@@ -100,7 +99,8 @@ export default {
   },
   mounted() {
     //this.action = global.initData.imgServer + 'api/signal'
-    this.currentM = sessionStorage.getItem('currentM') ? sessionStorage.getItem('currentM') : this.$store.getters.currentM
+    this.currentM = this.$store.getters.currentM+''
+    console.log(this.currentM)
     this.topMenu_h = -($('.top-menu').height() / 80 - 1)
     this.getTopMenu()
   },
@@ -183,20 +183,8 @@ export default {
         }
       ]
       const menu = []
-      top.forEach(route => {
-        if (this.hasPermission(route)) {
-          menu.push(route)
-        }
-      })
       this.topMenu = menu
     },
-    hasPermission(route) {
-      if (this.roles.indexOf(route.role) != -1) {
-        return true
-      } else {
-        return false
-      }
-    }
   }
 }
 </script>

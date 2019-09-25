@@ -3,6 +3,7 @@
     <div :class="classObj" class="app-wrapper">
         <el-scrollbar style="height: 100%">
             <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside"/>
+            <app-header/>
             <sidebar class="sidebar-container"/>
             <div class="main-container">
                 <tags-view/>
@@ -14,13 +15,13 @@
             </div>
         </el-scrollbar>
     </div>
-
 </template>
 
 <script>
      import AppMain from '../../views/layout/components/AppMain.vue'
      import Sidebar from './components/Sidebar/index.vue'
      import TagsView from './components/TagsView.vue'
+     import index from './components/header/index.vue'
 
     // import Test from '../../views/layout/components/test'
 
@@ -31,6 +32,7 @@
             Sidebar,
             AppMain,
             TagsView,
+            'app-header': index,
         },
         mixins: [ResizeMixin],
         computed: {

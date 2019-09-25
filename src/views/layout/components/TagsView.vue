@@ -51,6 +51,8 @@
             // console.log(this.$refs);
             // console.log(this.$refs.tag);
             this.refsTag = this.$refs.tag;
+            this.addViewTag();
+            //console.log(this.$route)
         },
         methods: {
             generateTitle,
@@ -59,7 +61,9 @@
             },
             addViewTag() {
                 const {name} = this.$route;
+               // console.log(this.$route)
                 if (name) {
+                    // console.log(this.$route)
                     this.$store.dispatch('addView', this.$route);
                 }
                 return false;

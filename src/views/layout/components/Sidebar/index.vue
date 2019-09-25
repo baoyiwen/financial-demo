@@ -21,7 +21,6 @@
 </template>
 
 <script>
-    import {asyncRouterMap, pathManage} from '@/routers/router'
     import {mapGetters} from 'vuex'
     import SidebarItem from './SidebarItem'
 
@@ -54,7 +53,7 @@
             },
         },
         mounted() {
-            console.log(this.m_routers)
+            //console.log(this.m_routers)
         }
     }
 </script>

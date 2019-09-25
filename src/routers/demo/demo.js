@@ -56,7 +56,127 @@ const demo = {
             name: 'article-detail',
             hidden: false,
             meta: { title: '详情', noCache: true }
-        }
+        },{
+            path: 'table-1',
+            component: () => import('@/views/demo/table'),
+            name: 'table-1',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-2',
+            component: () => import('@/views/demo/table'),
+            name: 'table-2',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-3',
+            component: () => import('@/views/demo/table'),
+            name: 'table-3',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-4',
+            component: () => import('@/views/demo/table'),
+            name: 'table-4',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-5',
+            component: () => import('@/views/demo/table'),
+            name: 'table-5',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-6',
+            component: () => import('@/views/demo/table'),
+            name: 'table-6',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-7',
+            component: () => import('@/views/demo/table'),
+            name: 'table-7',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-8',
+            component: () => import('@/views/demo/table'),
+            name: 'table-8',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-9',
+            component: () => import('@/views/demo/table'),
+            name: 'table-9',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-10',
+            component: () => import('@/views/demo/table'),
+            name: 'table-10',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-11',
+            component: () => import('@/views/demo/table'),
+            name: 'table-11',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-12',
+            component: () => import('@/views/demo/table'),
+            name: 'table-12',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-13',
+            component: () => import('@/views/demo/table'),
+            name: 'table-13',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-14',
+            component: () => import('@/views/demo/table'),
+            name: 'table-14',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-15',
+            component: () => import('@/views/demo/table'),
+            name: 'table-15',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-16',
+            component: () => import('@/views/demo/table'),
+            name: 'table-16',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-17',
+            component: () => import('@/views/demo/table'),
+            name: 'table-17',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-18',
+            component: () => import('@/views/demo/table'),
+            name: 'table-18',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-19',
+            component: () => import('@/views/demo/table'),
+            name: 'table-19',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },{
+            path: 'table-20',
+            component: () => import('@/views/demo/table'),
+            name: 'table-20',
+            hidden: false,
+            meta: { title: '表格模板', noCache: true }
+        },
     ]
 }
 

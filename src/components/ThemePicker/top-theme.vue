@@ -24,7 +24,7 @@ import theme from '@/utils/theme'
 
 export default {
   name: 'topTheme',
-  mixins: [theme()],
+ mixins: [theme()],
   data() {
     return {
       chalk: '',
