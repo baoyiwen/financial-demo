@@ -9,7 +9,7 @@
                 <app-main/>
                 <div class="m-footer">
                     <!--<img src="../../assets/img/logo-footer.png" alt="">-->
-                    环保演示系统@版权所有
+                    财务演示系统
                 </div>
             </div>
         </el-scrollbar>
