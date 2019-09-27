@@ -5,7 +5,7 @@
         <div class="logo-img">
           <!--<img src="../../../../assets/img/logo.png" alt="">-->
         </div>
-        内江环保演示系统
+        财务演示系统
       </div>
       <div class="top-menu-box">
         <el-menu :default-active="currentM" class="top-menu" mode="horizontal" @select="handleSelect">
