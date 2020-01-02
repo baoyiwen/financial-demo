@@ -12,7 +12,7 @@
           <el-menu-item v-for="item in topMenu" :index="item.code" :key="item.code">
             <i :class="item.icon"/>
             <span slot="title">{{ item.label }}</span>
-          </el-menu-item>
+          </el-menu-item >
         </el-menu>
         <div v-if="topMenu.length > 4" class="top-menu-btn-box">
           <span :class="{'disabled':topMenu_c===0}" class=" top-btn " @click="topMenuHandle(-1)">
@@ -30,7 +30,7 @@
             <div slot="content">
               姓名:张三<br>
               工号:10000000000<br>
-              部门:软件事业部<br>
+              部门:工程部<br>
             </div>
             <span class="top-userImg-box" @click="goUserInfo">
               <img v-if="true" src="../../../../assets/img/appResourcesImg/indexImg/bj.png" class="top-userImg">
